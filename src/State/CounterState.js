@@ -21,3 +21,14 @@ export function resetCount() {
         type:RESET
     }
 }
+
+export function counterReducer(state = defaultValue, action) {
+    switch (action.type){
+        case INCREMENT: {
+            return state + action.payload
+        }
+        default: {
+        return state
+        }
+    }
+}
