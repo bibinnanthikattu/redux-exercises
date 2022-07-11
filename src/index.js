@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { store } from './State/Store'
 import { incrementCount } from './State/CounterState';
+import { addItems, editItems, removeItems } from './State/ToDoState';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -21,4 +22,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 store.subscribe(() => {
 console.log(store.getState());
 })
-store.dispatch(incrementCount(7))
+store.dispatch(addItems({ id: 1, title: 'React', completed: true }))
+// store.dispatch (removeItems(1))
+store.dispatch(incrementCount(4))
